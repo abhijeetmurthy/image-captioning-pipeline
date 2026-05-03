@@ -1,25 +1,18 @@
 # Image Captioning Pipeline
 
-Generic deep-learning pipeline for converting images into natural-language captions.
+Enterprise-style deep learning pipeline for generating captions from images.
 
-## Pipeline Stages
+## Structure
+- `main.py`: primary training/inference runner.
+- `configs/`: runtime config template.
+- `scripts/`: bootstrap + run entrypoints.
+- `docs/`: architecture notes.
 
-1. Ingest: load image-caption pairs from a dataset.
-2. Preprocess: tokenize captions and extract visual features.
-3. Train: optimize caption-generation model.
-4. Evaluate: compare caption quality on validation/test samples.
-5. Infer: generate captions for unseen images.
-
-## Repository Layout
-
-- `main.py`: end-to-end training/inference entrypoint.
-
-## Example Dataset Reference
-
-- Flickr8k dataset is used as the current example dataset for this pipeline.
-
-## Run
-
+## Quickstart
 ```bash
-python main.py
+./scripts/bootstrap.sh
+./scripts/run_pipeline.sh
 ```
+
+## Example Dataset
+- Flickr8k is the current example dataset used by this project.
